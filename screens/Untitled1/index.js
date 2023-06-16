@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import { View, StyleSheet, ImageBackground } from "react-native";
+import { View, StyleSheet, ImageBackground, Text, Pressable } from "react-native";
 
 const Splash = ({
   navigation
@@ -14,7 +14,13 @@ const Splash = ({
       <ImageBackground style={styles.BAuRCnCj} source={require("./Wheel_Loader_WA500.png")} resizeMode="cover"></ImageBackground>
       <ImageBackground style={styles.eziaingY} source={require("./komatsu-logo.png")} resizeMode="cover"></ImageBackground>
       <ImageBackground style={styles.BAuRCnCjw} source={require("./bg.png")} resizeMode="cover"></ImageBackground>
-
+      <Pressable onPress={() => {
+      navigation.navigate("Azure Ad Auth");
+    }} style={styles.VngTxYqJa}>
+        <View style={styles.VngTxYqJ}>
+          <Text style={styles.OLGmBJlN}>Get Started</Text>
+        </View>
+      </Pressable>
     </View>;
 };
 
@@ -46,8 +52,7 @@ const styles = StyleSheet.create({
     zIndex: -1,
     transform: [{
       rotate: "90deg"
-    }],
-    left: -320
+    }]
   },
   eziaingY: {
     width: 192,
@@ -55,6 +60,32 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 50,
     alignSelf: "center"
+  },
+  VngTxYqJa: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "flex-end"
+  },
+  VngTxYqJ: {
+    height: 48,
+    width: 200,
+    backgroundColor: "#ffffff",
+    borderRadius: 10,
+    color: "#777777",
+    bottom: 40,
+    borderWidth: 2,
+    borderColor: "#150A9A",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  OLGmBJlN: {
+    lineHeight: 34,
+    fontSize: 20,
+    fontWeight: "700",
+    color: "#150A9A",
+    paddingLeft: 10,
+    paddingRight: 10
   }
 });
 export default Splash;
