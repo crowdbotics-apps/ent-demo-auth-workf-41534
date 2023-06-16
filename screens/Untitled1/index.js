@@ -18,7 +18,7 @@ const Splash = ({
       navigation.navigate("Azure Ad Auth");
     }} style={styles.VngTxYqJa}>
         <View style={styles.VngTxYqJ}>
-          <Text style={styles.OLGmBJlN}>Get Started</Text>
+          <Text style={styles.OLGmBJlN}>Get Started Today</Text>
         </View>
       </Pressable>
     </View>;
