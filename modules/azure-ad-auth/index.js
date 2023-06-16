@@ -57,7 +57,7 @@ function AzureADAuth(params) {
           </View>
           <View style={styles?.sectionContent}>
             <ImageBackground style={styles?.sectionImage} source={require("./assets/hero_pc_en.jpg")} resizeMode="cover"></ImageBackground>
-            <ImageBackground style={styles?.sectionImage2} source={require("./assets/02.jpeg")} resizeMode="cover"></ImageBackground>
+            <ImageBackground style={styles?.sectionImage2} source={require("./02.jpeg")} resizeMode="cover"></ImageBackground>
           </View>
           
           <TouchableOpacity style={styles?.button} onPress={() => {
