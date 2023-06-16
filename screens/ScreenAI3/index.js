@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
+import React, { useState, useEffect } from "react";
+import { View, Text, StyleSheet, FlatList, Image } from "react-native";
 
 const ResultsScreen = () => {
   const [results, setResults] = useState([]);
@@ -8,7 +8,7 @@ const ResultsScreen = () => {
   }, []);
 
   const fetchResults = async () => {
-    const response = await fetch('https://api.example.com/results');
+    const response = await fetch("https://api.example.com/results");
     const data = await response.json();
     setResults(data.results);
   };
@@ -17,7 +17,7 @@ const ResultsScreen = () => {
     item
   }) => <View style={styles.itemContainer}>
       <Image style={styles.image} source={{
-      uri: item.image || 'https://tinyurl.com/42evm3m3'
+      uri: item.image || "https://tinyurl.com/42evm3m3"
     }} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{item.title}</Text>
@@ -33,16 +33,16 @@ const ResultsScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5'
+    backgroundColor: "#F5F5F5"
   },
   itemContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#FFFFFF',
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
     borderRadius: 10,
     margin: 10,
     padding: 10,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2
@@ -61,11 +61,11 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
-    fontWeight: 'bold'
+    fontWeight: "bold"
   },
   description: {
     fontSize: 14,
-    color: '#777'
+    color: "#777"
   }
 });
 export default ResultsScreen;
