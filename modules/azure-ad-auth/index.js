@@ -37,7 +37,7 @@ function AzureADAuth(params) {
       });
       setUser(JSON.stringify(info, null, 2));
       setTimeout(() => {
-        navigation.navigate("komatsuTool");
+        navigation.navigate("Untitled5");
       }, 3000);
     } catch (error) {
       console.log(error);
@@ -46,32 +46,30 @@ function AzureADAuth(params) {
 
   return <SafeAreaView style={styles?.safeArea}>
       <View style={styles?.MVfceqLO}>
-        <View style={styles?.header}>
-          <ImageBackground style={styles?.headerImage} source={require("./assets/komatsu-logo.png")} resizeMode="cover"></ImageBackground>
-        </View>
 
-        <View style={styles?.section}>
-          <Text style={styles?.headerText}>My Komatsu</Text>
+          <View style={styles?.header}>
+            <ImageBackground style={styles?.headerImage} source={require("./assets/komatsu-logo.png")} resizeMode="cover"></ImageBackground>
+          </View>
 
-          <Text style={styles?.sectionText}>
-            Welcome to your personalized experience
-          </Text>
-        </View>
-        <View style={styles?.sectionContent}>
-          <ImageBackground style={styles?.sectionImage} source={require("./assets/hero_pc_en.jpg")} resizeMode="cover"></ImageBackground>
-          <ImageBackground style={styles?.sectionImage2} source={require("./assets/02.jpeg")} resizeMode="cover"></ImageBackground>
-        </View>
-
-        <TouchableOpacity style={styles?.button} onPress={() => {
+          <View style={styles?.section}>
+            <Text style={styles?.headerText}>My Komatsu</Text>
+            <Text style={styles?.sectionText}>Welcome to your personalized experience</Text>
+          </View>
+          <View style={styles?.sectionContent}>
+            <ImageBackground style={styles?.sectionImage} source={require("./assets/hero_pc_en.jpg")} resizeMode="cover"></ImageBackground>
+            <ImageBackground style={styles?.sectionImage2} source={require("./assets/02.jpeg")} resizeMode="cover"></ImageBackground>
+          </View>
+          
+          <TouchableOpacity style={styles?.button} onPress={() => {
         fetchData(navigation);
       }}>
-          <Text style={styles?.DjHOfaku}>Login with Azure AD</Text>
-        </TouchableOpacity>
+            <Text style={styles?.DjHOfaku}>Login with Azure AD</Text>
+          </TouchableOpacity>
 
-        <ScrollView style={[styles?.consoleResponseSection, _styles.fdfHasbd]}>
-          <Text style={styles?.consoleText}>{user}</Text>
-          <Text style={styles?.consoleText}>{accessToken}</Text>
-        </ScrollView>
+          <ScrollView style={[styles?.consoleResponseSection, _styles.fdfHasbd]}>
+            <Text style={styles?.consoleText}>{user}</Text>
+            <Text style={styles?.consoleText}>{accessToken}</Text>
+          </ScrollView>
       </View>
     </SafeAreaView>;
 }
